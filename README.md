@@ -2,13 +2,15 @@
 
 Native Windows port of Dead Babies Xtreme, the Xbox homebrew game by **Chris Friesen** and credited contributors. Built from the available C++ game source with native Windows graphics, audio, and input.
 
-**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Native-x64.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
+**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Native-x64-fixed.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
 
 This repository contains one Windows build: the final Rock-and-louder-announcements version. Earlier builds and unrelated projects are excluded.
 
 ## Run
 
-Extract the full ZIP and run **`DeadBabiesXNative.exe`** directly. Keep the `game/` folder and `libwinpthread-1.dll` beside it.
+The current download uses a standard uncompressed ZIP for extraction compatibility.
+
+Extract the full ZIP, open the `DeadBabiesX-Windows` folder, and run **`DeadBabiesXNative.exe`** directly. Keep the `game/` folder and `libwinpthread-1.dll` beside it.
 
 The four `.ogg` files must also stay beside the EXE because the Music menu loads them from that location:
 
