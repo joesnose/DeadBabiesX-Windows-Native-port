@@ -1,0 +1,22 @@
+DEAD BABIES X — WINDOWS NATIVE PORT
+Latest Windows build: Rock music and louder game-over/winner announcements.
+
+Extract the entire ZIP into a folder, then run DeadBabiesXNative.exe.
+Keep libwinpthread-1.dll and the game folder beside the executable.
+Keep these four required music files beside it too:
+  music3.ogg — Original
+  static-reactor.ogg — Static Reactor
+  acid-house.ogg — Acid House
+  rock.ogg — Rock
+The Music menu loads these filenames directly from the game folder.
+
+The optional .cmd launchers have been removed. Select graphics and music in-game.
+Controller: left stick moves, right stick aims, RT fires, LT alternate fire,
+A collects pickups/confirms menus, RB/LB specials, Start joins/pauses.
+Keyboard: A/D move, arrows aim, Space fire, Shift alternate fire,
+Q/E specials, Enter confirms/joins/pauses, Escape opens the pause menu.
+F11 or Alt+Enter toggles fullscreen/windowed mode.
+For Steam on Linux, use the Windows executable through a compatible Proton version.
+
+This package preserves the final Windows executable and runtime DLL unchanged.
+Original game/code/art: Chris Friesen and credited contributors. See notices/.
