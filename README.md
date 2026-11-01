@@ -2,7 +2,7 @@
 
 Native Windows port of Dead Babies Xtreme, the Xbox homebrew game by **Chris Friesen** and credited contributors. Built from the available C++ game source with native Windows graphics, audio, and input.
 
-**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Cinematic-SSHD-x64-v1.5.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
+**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-v1.5.1-Train-Fix.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
 
 The latest Windows build upgrades Super Super HD with a dedicated Cinematic art pack. Cartoon, Alpine Dusk and the pause-menu fix remain intact. The prior release remains available.
 
@@ -120,3 +120,11 @@ Atlas sources are in source/cinematic_art. Re-export using
 `python source/export_alpine_sprites.py --theme cinematic --atlases source/cinematic_art`.
 Validate using `python source/test_alpine_assets.py --theme cinematic`.
 Windows/Proton live gameplay has not been tested in this environment.
+
+## v1.5.1 train-base fix
+
+Only the train rendering below the standing surface is extended to the bottom
+of the playfield, with overscan for camera shake. The platform top, collision
+positions, sprite artwork, graphics modes and side borders are unchanged.
+Geometry checks cover the actual train layer assets; live Windows/Proton
+rendering has not been tested in this environment.

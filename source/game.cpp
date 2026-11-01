@@ -3678,13 +3678,11 @@ void CGame::Refresh() {
   XEngine->DrawSprite(m_BGImage[3], float(BG3Scroll + BG3Width * 2), 240, float(BG3Width), 640.0f,
                       0);
 
-  XEngine->DrawSprite(m_BGImage[2], float(BG2Scroll), 240, 640, 640.0f, 0);
-  XEngine->DrawSprite(m_BGImage[2], float(BG2Scroll + 640), 240, 640, 640.0f,
-                      0);
-  XEngine->DrawSprite(m_BGImage[2], float(BG2Scroll + 1280), 240, 640, 640.0f,
-                      0);
+  XEngine->DrawTrainBase(m_BGImage[2], float(BG2Scroll), 240, 640, 640.0f);
+  XEngine->DrawTrainBase(m_BGImage[2], float(BG2Scroll + 640), 240, 640, 640.0f);
+  XEngine->DrawTrainBase(m_BGImage[2], float(BG2Scroll + 1280), 240, 640, 640.0f);
 
-  XEngine->DrawSprite(m_BGImage[1], 320.0f, 240, 640, 640.0f, 0);
+  XEngine->DrawTrainBase(m_BGImage[1], 320.0f, 240, 640, 640.0f);
 
   for (std::list<Balloon *>::iterator iBalloon = m_BalloonList.begin(),
                                       iBalloon_next = iBalloon;

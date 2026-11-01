@@ -1,5 +1,5 @@
 DEAD BABIES X — WINDOWS NATIVE PORT
-Windows v1.5: Cinematic Super Super HD art upgrade.
+Windows v1.5.1: train base extends to the bottom of the playfield.
 
 Extract the entire ZIP into a folder, then run DeadBabiesXNative.exe.
 Keep libwinpthread-1.dll and the game folder beside the executable.

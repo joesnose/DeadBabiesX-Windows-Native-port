@@ -92,6 +92,7 @@ public:
   void SetSpriteMode(int);
   void SetCameraPos(float, float);
   void DrawSprite(IDirect3DTexture8 *, float, float, float, float, float);
+  void DrawTrainBase(IDirect3DTexture8 *, float, float, float, float);
   void DrawSpriteOC(IDirect3DTexture8 *, float, float, float, float, float);
   void DrawTracer(IDirect3DTexture8 *, float, float, float, float, float);
   void DrawText(const char *, int, int, int, int, int);

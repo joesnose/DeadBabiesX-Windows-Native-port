@@ -2,6 +2,7 @@
 #include "cel_shading.h"
 #include "cartoon_shading.h"
 #include "alpine_dusk.h"
+#include "train_base.h"
 #undef XInputSetState
 #include <GL/gl.h>
 #include <mmsystem.h>
@@ -759,6 +760,25 @@ void CXEngine::DrawSprite(IDirect3DTexture8 *t, float x, float y, float w,
   glTranslatef(x + cameraX, y + cameraY, 0);
   glRotatef(-rot, 0, 0, 1);
   spriteQuad(t, -w / 2, -h / 2, w / 2, h / 2);
+  glPopMatrix();
+}
+void CXEngine::DrawTrainBase(IDirect3DTexture8 *t,float x,float y,float w,float h) {
+  if(!t||t->empty||!t->height||h<=0) return;
+  // Texture bounds include two transparent texels of filter padding.
+  const float opaqueV=std::max(t->v0,t->v1-2.f/t->height);
+  const TrainBaseStretch stretch(y-h/2+h*opaqueV,cameraY);
+  const float split=std::clamp((TrainBaseStretch::standingY-y)/h+.5f,t->v0,t->v1);
+  const float left=-w/2+w*t->u0,right=-w/2+w*t->u1;
+  glBindTexture(GL_TEXTURE_2D,t->id);
+  glPushMatrix();
+  glTranslatef(x+cameraX,y+cameraY,0);
+  glBegin(GL_TRIANGLE_STRIP);
+  for(float v:{t->v0,split,t->v1}) {
+    const float py=stretch.map(y-h/2+h*v)-y;
+    glTexCoord2f(t->u0,v);glVertex2f(left,py);
+    glTexCoord2f(t->u1,v);glVertex2f(right,py);
+  }
+  glEnd();
   glPopMatrix();
 }
 void CXEngine::DrawSpriteOC(IDirect3DTexture8 *t, float x, float y, float w,
