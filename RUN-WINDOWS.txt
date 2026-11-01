@@ -1,5 +1,7 @@
 DEAD BABIES X — WINDOWS NATIVE PORT
-Windows v1.5.1: train base extends to the bottom of the playfield.
+Windows v1.6: Difficulty replaces the Mega Weapons menu row.
+Easy = Mega Weapons, Normal = standard game, Hard = every enemy starts with a bomb.
+Choose Difficulty on the title screen before starting. Normal is the default.
 
 Extract the entire ZIP into a folder, then run DeadBabiesXNative.exe.
 Keep libwinpthread-1.dll and the game folder beside the executable.

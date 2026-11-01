@@ -10,7 +10,7 @@ Frontend::Frontend() {
             skin && std::string(skin) == "superhd" ? 2 :
             skin && std::string(skin) == "hd" ? 1 : 0;
   NativeSetArtMode(artMode);
-  megaWeapons = getenv("DBX_TEST_MEGA") != nullptr;
+  difficulty = getenv("DBX_TEST_MEGA") ? Difficulty::Easy : Difficulty::Normal;
   backdrop = XEngine->LoadTexture("d:\\data\\backgrounds\\train_bg3.png");
   fprintf(stderr, "MENU title\n");
 }
@@ -108,8 +108,8 @@ MenuAction Frontend::Update() {
   int musicRow = paused ? 2 : 3;
   if (selection == musicRow && (confirm || adjust)) return ToggleMusic(adjust ? horizontal : 1);
   if (!paused && selection == 4 && (confirm || adjust)) {
-    megaWeapons = !megaWeapons;
-    fprintf(stderr, "MENU mega weapons %s\n", megaWeapons ? "ON" : "OFF");
+    difficulty=CycleDifficulty(difficulty,adjust ? horizontal : 1);
+    fprintf(stderr,"MENU difficulty %s\n",DifficultyLabel(difficulty));
     return MenuAction::None;
   }
   if (!confirm) return MenuAction::None;
@@ -171,12 +171,12 @@ void Frontend::Draw() {
   XEngine->FillRect(462,panelY+16,4,4,paused?.85f:.38f,paused?.44f:.63f,.20f,1);
   XEngine->DrawUiText(paused?"HOLD":"READY",510,panelY+13,10,160,145,122,true);
   XEngine->FillRect(132,panelY+30,376,1,.22f,.17f,.12f,1);
-  char playersText[40],graphicsText[64],musicText[64],megaText[48];
+  char playersText[40],graphicsText[64],musicText[64],difficultyText[48];
   snprintf(playersText,sizeof(playersText),"PLAYERS: < %d >",players);
   snprintf(graphicsText,sizeof(graphicsText),"GRAPHICS: < %s >",NativeArtLabel(artMode));
   snprintf(musicText,sizeof(musicText),"MUSIC: < %s >",NativeMusicLabel(NativeMusicChoice()));
-  snprintf(megaText,sizeof(megaText),"MEGA WEAPONS: < %s >",megaWeapons?"ON":"OFF");
-  const char *titleItems[]={"START GAME",playersText,graphicsText,musicText,megaText,"EXIT GAME"};
+  snprintf(difficultyText,sizeof(difficultyText),"DIFFICULTY: < %s >",DifficultyLabel(difficulty));
+  const char *titleItems[]={"START GAME",playersText,graphicsText,musicText,difficultyText,"EXIT GAME"};
   const char *pauseItems[]={"RESUME",graphicsText,musicText,"EXIT GAME"};
   for(int i=0;i<count;++i) {
     const float y=top+i*rowHeight;const bool active=i==selection;
@@ -196,7 +196,7 @@ void Frontend::Draw() {
   if(!paused&&selection==1)hint="LEFT / RIGHT: PLAYER COUNT";
   if(selection==(paused?1:2))hint="LEFT / RIGHT: GRAPHICS STYLE";
   if(selection==(paused?2:3))hint="LEFT / RIGHT: CHANGE TRACK";
-  if(!paused&&selection==4)hint=megaWeapons?"MAX WEAPON LEVEL: 5":"MAX WEAPON LEVEL: 3";
+  if(!paused&&selection==4)hint=difficulty==Difficulty::Easy?"EASY: MEGA WEAPONS - MAX LEVEL 5":difficulty==Difficulty::Hard?"HARD: EVERY ENEMY STARTS WITH A BOMB":"NORMAL: STANDARD GAMEPLAY";
   XEngine->DrawUiText(hint,320,414,10,190,159,120,true);
   XEngine->DrawUiText("ENTER / A: CONFIRM     ESC / B: BACK",320,438,10,157,143,122,true);
 }

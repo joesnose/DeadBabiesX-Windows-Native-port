@@ -29,7 +29,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR args, int) {
     bool roundExists = false;
     if (getenv("DBX_STRESS")) {
       XEngine->StopAllSounds();
-      SetMegaWeapons(frontend.MegaWeapons());
+      SetGameDifficulty(frontend.SelectedDifficulty());
       Game.Init();
       roundExists = true;
       frontend.Play();
@@ -46,7 +46,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR args, int) {
         if (action == MenuAction::Start) {
           fprintf(stderr, "MENU start\n");
           SetStartingPlayers(frontend.PlayerCount());
-          SetMegaWeapons(frontend.MegaWeapons());
+          SetGameDifficulty(frontend.SelectedDifficulty());
           if (roundExists)
             ResetNativeRound();
           else {

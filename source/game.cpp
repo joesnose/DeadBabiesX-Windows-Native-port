@@ -17,6 +17,12 @@
 CGame Game;
 static int startingPlayers = 1;
 static bool megaWeapons = false;
+static Difficulty currentDifficulty=Difficulty::Normal;
+void SetGameDifficulty(Difficulty d) {
+  currentDifficulty=d;
+  megaWeapons=d==Difficulty::Easy;
+}
+bool HardDifficulty() {return DifficultyStartsArmed(currentDifficulty);}
 void SetMegaWeapons(bool enabled) { megaWeapons = enabled; }
 int WeaponPowerLimit() { return megaWeapons ? 5 : 3; }
 int CWeapon::Upgrade() {
@@ -1189,7 +1195,7 @@ CBaby::CBaby() {
   m_ThreatLevel = 0;
   m_Health = 32;
 
-  m_HasBomb = false;
+  m_HasBomb = HardDifficulty();
   m_OnFire = false;
 
   m_Hit = 0;
@@ -2681,7 +2687,7 @@ int CGame::Update() {
 
       if (Baby->m_BabyState == BS_FLOATINGLEFT ||
           Baby->m_BabyState == BS_FLOATINGRIGHT) {
-        if (Baby->m_ThreatLevel > 0) {
+        if (DifficultyCanDropBomb(currentDifficulty,Baby->m_ThreatLevel)) {
           for (std::list<CPlayer *>::iterator iPlayer = m_PlayerList.begin(),
                                               iPlayer_next = iPlayer;
                iPlayer != m_PlayerList.end(); iPlayer = iPlayer_next) {

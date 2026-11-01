@@ -2,6 +2,7 @@
 #define _H_GAME
 
 #include "xengine.h"
+#include "difficulty.h"
 struct PROFILESTATS {
   int HighScore = 0;
 };
@@ -574,6 +575,8 @@ public:
 
 extern CGame Game;
 void SetStartingPlayers(int count);
+void SetGameDifficulty(Difficulty difficulty);
+bool HardDifficulty();
 void SetMegaWeapons(bool enabled);
 int WeaponPowerLimit();
 int GrenadeFragments(int level, bool manual);

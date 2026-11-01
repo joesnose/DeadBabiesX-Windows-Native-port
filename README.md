@@ -2,7 +2,7 @@
 
 Native Windows port of Dead Babies Xtreme, the Xbox homebrew game by **Chris Friesen** and credited contributors. Built from the available C++ game source with native Windows graphics, audio, and input.
 
-**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-v1.5.1-Train-Fix.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
+**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-v1.6-Difficulty.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
 
 The latest Windows build upgrades Super Super HD with a dedicated Cinematic art pack. Cartoon, Alpine Dusk and the pause-menu fix remain intact. The prior release remains available.
 
@@ -31,7 +31,7 @@ For Steam on Linux, run the Windows executable using a compatible Proton version
 - Alpine Dusk: an original faceted mountain-and-pine background, a pastel dusk palette, cooler terrain, and a complete redrawn sprite set inspired by over the hill. It retains the 2D game and original sprite silhouettes.
 - Pause menu Exit Game returns to the main menu; Exit Game on the main menu still closes the application.
 - Four selectable music tracks, including Rock.
-- Local controller multiplayer and optional Mega Weapons.
+- Local controller multiplayer and Easy, Normal and Hard difficulty.
 - Title/pause menus and animated winner/score results.
 - Louder music, game-over speech, spoken winner cue, and victory sting.
 
@@ -128,3 +128,17 @@ of the playfield, with overscan for camera shake. The platform top, collision
 positions, sprite artwork, graphics modes and side borders are unchanged.
 Geometry checks cover the actual train layer assets; live Windows/Proton
 rendering has not been tested in this environment.
+
+## v1.6 Difficulty menu
+
+The title-menu **Mega Weapons** row is now **Difficulty**. Use Left/Right or
+confirm to cycle modes before starting a round. Normal is the default on launch.
+
+- **Easy:** the existing Mega Weapons mode; upgrades reach level 5.
+- **Normal:** the standard game, with level-3 weapons and original bomb rules.
+- **Hard:** standard level-3 weapons; every enemy starts carrying a bomb and can
+  drop it on its first pass. Existing bomb drop, release and rearming behaviour
+  is reused. No additional speed, health or spawn-rate changes are applied.
+
+The selected mode persists when returning to the title within a launch and is
+applied before each fresh round. All art, music and the train-bottom fix remain.

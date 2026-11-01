@@ -11,14 +11,14 @@ public:
   bool WantsPause();
   MenuAction Update();
   int PlayerCount() const { return players; }
-  bool MegaWeapons() const { return megaWeapons; }
+  Difficulty SelectedDifficulty() const { return difficulty; }
   void Draw();
 
 private:
   int selection = 0, heldDirection = 0, heldHorizontal = 0, players = 1;
   bool inputArmed = false;
   int artMode = 0;
-  bool megaWeapons = false;
+  Difficulty difficulty = Difficulty::Normal;
   MenuAction ToggleArt(int delta);
   MenuAction ToggleMusic(int delta);
   IDirect3DTexture8 *backdrop = nullptr;
