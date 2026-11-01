@@ -6,7 +6,7 @@ Frontend::Frontend() {
   artMode = skin && std::string(skin) == "alpine" ? 6 :
             skin && std::string(skin) == "cartoon" ? 5 :
             skin && std::string(skin) == "celshaded" ? 4 :
-            skin && std::string(skin) == "supersuperhd" ? 3 :
+            skin && (std::string(skin) == "supersuperhd" || std::string(skin) == "cinematic") ? 3 :
             skin && std::string(skin) == "superhd" ? 2 :
             skin && std::string(skin) == "hd" ? 1 : 0;
   NativeSetArtMode(artMode);

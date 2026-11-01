@@ -1,0 +1,1317 @@
+{
+  "style": "Super Super HD \u2014 Cinematic",
+  "sprites": [
+    {
+      "path": "player/blue/blue_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_45.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_90.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_legs_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_legs_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_legs_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_legs_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_legs_stand.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_lives.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/blue/blue_stand.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_45.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_90.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_legs_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_legs_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_legs_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_legs_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_legs_stand.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_lives.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/green/green_stand.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_45.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_90.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_legs_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_legs_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_legs_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_legs_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_legs_stand.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_lives.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/red/red_stand.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_45.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_90.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_legs_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_legs_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_legs_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_legs_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_legs_stand.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_lives.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "players"
+    },
+    {
+      "path": "player/yellow/yellow_stand.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "players"
+    },
+    {
+      "path": "babies/1_balloon.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/2_balloon.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/3_balloon.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/4_balloon.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/5_balloon.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/6_balloon.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/7_balloon.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/8_balloon.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/babyballoon.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/babyballoon1.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/babyballoon2.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/babyballoon3.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_bomb.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_getup_1.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_getup_2.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_getup_3.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_getup_4.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_stand.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_walk_1.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_walk_2.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_walk_3.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_walk_4.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/baby_walk_5.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/balloon.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "babies/deadbaby.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "babies"
+    },
+    {
+      "path": "crates/crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/flamethrower_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/gravity_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/grenade_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/gun_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/ioncannon_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/nuke_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/paracute.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/plasma_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/rail_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/random_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/rocket_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/shield_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "crates/time_crate.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "pickups"
+    },
+    {
+      "path": "aimers/aimer_blue.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "aimers/aimer_green.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "aimers/aimer_red.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "aimers/aimer_yellow.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "gibs/gib1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "gibs/gib2.png",
+      "size": [
+        204,
+        112
+      ],
+      "source_size": [
+        51,
+        28
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "gibs/gib3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "gibs/gib4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "gibs/gib5.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "gibs/gib6.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "particles/boost_particle.png",
+      "size": [
+        64,
+        64
+      ],
+      "source_size": [
+        16,
+        16
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "particles/particle.png",
+      "size": [
+        64,
+        64
+      ],
+      "source_size": [
+        16,
+        16
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "particles/rail_particle.png",
+      "size": [
+        64,
+        64
+      ],
+      "source_size": [
+        16,
+        16
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/bullet_tracer.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_size": [
+        8,
+        8
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/grenade.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/muzzle_flash_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/muzzle_flash_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/muzzle_flash_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_size": [
+        64,
+        64
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/plasma.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/power_bar.png",
+      "size": [
+        64,
+        64
+      ],
+      "source_size": [
+        16,
+        16
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/power_bar_box.png",
+      "size": [
+        64,
+        64
+      ],
+      "source_size": [
+        16,
+        16
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/rail_tracer.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_size": [
+        8,
+        8
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/rocket.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_size": [
+        32,
+        32
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/corona.png",
+      "size": [
+        512,
+        256
+      ],
+      "source_size": [
+        128,
+        64
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/fire.png",
+      "size": [
+        64,
+        64
+      ],
+      "source_size": [
+        16,
+        16
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/rocket_smoke.png",
+      "size": [
+        64,
+        64
+      ],
+      "source_size": [
+        16,
+        16
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/smoke.png",
+      "size": [
+        64,
+        64
+      ],
+      "source_size": [
+        16,
+        16
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "weapons/spark.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_size": [
+        8,
+        8
+      ],
+      "group": "effects"
+    },
+    {
+      "path": "gui/game_over.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "source_size": [
+        512,
+        512
+      ],
+      "group": "hud"
+    },
+    {
+      "path": "gui/gui_box.png",
+      "size": [
+        1024,
+        512
+      ],
+      "source_size": [
+        256,
+        128
+      ],
+      "group": "hud"
+    }
+  ],
+  "description": "Polished materials and cinematic sprite art; stylized fictional enemies and mechanical debris",
+  "sprite_revision": 2,
+  "sprite_count": 109,
+  "sprites_description": "Dedicated redraws, four times original canvas resolution; original module positions and pivots retained"
+}

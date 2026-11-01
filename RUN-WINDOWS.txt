@@ -1,5 +1,5 @@
 DEAD BABIES X — WINDOWS NATIVE PORT
-Windows v1.4: Classic Cartoon sprite upgrade.
+Windows v1.5: Cinematic Super Super HD art upgrade.
 
 Extract the entire ZIP into a folder, then run DeadBabiesXNative.exe.
 Keep libwinpthread-1.dll and the game folder beside the executable.
@@ -18,7 +18,8 @@ Q/E specials, Enter confirms/joins/pauses, Escape opens the pause menu.
 F11 or Alt+Enter toggles fullscreen/windowed mode.
 For Steam on Linux, use the Windows executable through a compatible Proton version.
 
-Select GRAPHICS: CARTOON from the main or pause menu for the new flat cartoon art.
+Select GRAPHICS: SUPER SUPER HD for the new cinematic art.
+GRAPHICS: CARTOON retains the flat traditional-cartoon sprite pack.
 ALPINE DUSK is also available with its existing full sprite pack.
 Alpine Dusk now includes 109 redrawn sprite textures at 4x canvas resolution.
 The existing alpine background is retained. Select the theme from Graphics.

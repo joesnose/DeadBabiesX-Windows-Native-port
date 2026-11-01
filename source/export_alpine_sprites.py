@@ -45,13 +45,13 @@ def sprite_bounds(cell):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--atlases',type=Path,required=True)
-    ap.add_argument('--assets',type=Path,default=Path('assets'));ap.add_argument('--theme',choices=['alpine','cartoon'],default='alpine');args=ap.parse_args()
+    ap.add_argument('--assets',type=Path,default=Path('assets'));ap.add_argument('--theme',choices=['alpine','cartoon','cinematic'],default='alpine');args=ap.parse_args()
     layout=json.loads((args.atlases/'layout.json').read_text())
     data=args.assets/'game/data';out=args.assets/f'game/{args.theme}/data';records=[]
     for group,meta in layout.items():
         sheet=Image.open(args.atlases/(group+'-redraw.png')).convert('RGBA')
         sx=sheet.width/meta['size'][0];sy=sheet.height/meta['size'][1]
-        if args.theme=='cartoon' and group=='players':
+        if args.theme in ('cartoon','cinematic') and group=='players':
             # This redraw retains seven columns but uses six occupied rows.
             occupied_rows=(len(meta['entries'])+meta['cols']-1)//meta['cols']
             sy=sheet.height/(occupied_rows*meta['cell'])
@@ -63,7 +63,7 @@ def main():
             cell=sheet.crop(box)
             bounds=sprite_bounds(cell)
             target=original.getchannel('A').getbbox()
-            cartoon_hud=args.theme=='cartoon' and group=='hud'
+            cartoon_hud=args.theme in ('cartoon','cinematic') and group=='hud'
             if cartoon_hud and 'game_over' in rel.lower():
                 target=original.convert('RGB').convert('L').point(lambda v:255 if v>15 else 0).getbbox()
             drawn=Image.new('RGBA',size)
@@ -76,13 +76,13 @@ def main():
             result=Image.alpha_composite(original.resize(size,Image.Resampling.LANCZOS),drawn)
             mask=original.getchannel('A').resize(size,Image.Resampling.LANCZOS)
             result.putalpha(mask)
-            if args.theme=='cartoon':
+            if args.theme in ('cartoon','cinematic'):
                 # UI lettering has no collision/animation silhouette to retain.
                 # Keep its original placement but allow legible new glyph shapes.
                 result=drawn
                 result.putalpha(result.getchannel('A').point(lambda a:0 if a<8 else a))
             dest=out/rel.lower();dest.parent.mkdir(parents=True,exist_ok=True);result.save(dest)
-            if args.theme!='cartoon':
+            if args.theme not in ('cartoon','cinematic'):
                 assert ImageChops.difference(result.getchannel('A'),mask).getbbox() is None
             records.append({'path':rel.lower(),'size':size,'source_size':list(original.size),'group':group})
     # Full-body life/stand icons reuse the exact modular torso and leg art;
@@ -96,13 +96,13 @@ def main():
             rel=f'Player/{colour}/{colour}_{suffix}.png'
             original=source_image(data/rel);size=(original.width*4,original.height*4)
             result=lower.resize(size,Image.Resampling.LANCZOS)
-            if args.theme!='cartoon':
+            if args.theme not in ('cartoon','cinematic'):
                 result.putalpha(original.getchannel('A').resize(size,Image.Resampling.LANCZOS))
             result.save(out/rel.lower())
     manifest=args.assets/f'game/{args.theme}/manifest.json'
     info=json.loads(manifest.read_text());info.update(sprite_revision=2,sprite_count=len(records),sprites=records,
-        sprites_description=('Flat cartoon redraws, four times original canvas resolution; original module positions and pivots retained' if args.theme=='cartoon' else 'Generated sprite redraws, four times original canvas resolution; modular alpha masks and pivots retained'))
+        sprites_description=('Dedicated redraws, four times original canvas resolution; original module positions and pivots retained' if args.theme in ('cartoon','cinematic') else 'Generated sprite redraws, four times original canvas resolution; modular alpha masks and pivots retained'))
     manifest.write_text(json.dumps(info,indent=2))
-    print('Exported and alpha-validated',len(records),args.theme+' sprite textures')
+    print('Exported',len(records),args.theme+' sprite textures')
 
 if __name__=='__main__': main()

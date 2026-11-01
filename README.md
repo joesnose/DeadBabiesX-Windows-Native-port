@@ -2,13 +2,13 @@
 
 Native Windows port of Dead Babies Xtreme, the Xbox homebrew game by **Chris Friesen** and credited contributors. Built from the available C++ game source with native Windows graphics, audio, and input.
 
-**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Classic-Cartoon-x64-v1.4.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
+**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Cinematic-SSHD-x64-v1.5.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
 
-The latest Windows build upgrades Cartoon with 109 dedicated flat, ink-outlined sprite textures. Alpine Dusk and the pause-menu fix remain intact. The prior release remains available.
+The latest Windows build upgrades Super Super HD with a dedicated Cinematic art pack. Cartoon, Alpine Dusk and the pause-menu fix remain intact. The prior release remains available.
 
 ## Run
 
-The current download uses a standard uncompressed ZIP for extraction compatibility.
+The current download uses standard ZIP/Deflate compression, supported by Windows Explorer and common ZIP tools.
 
 Extract the full ZIP, open the `DeadBabiesX-Windows` folder, and run **`DeadBabiesXNative.exe`** directly. Keep the `game/` folder and `libwinpthread-1.dll` beside it.
 
@@ -103,3 +103,20 @@ Atlas sources are in source/cartoon_art. Re-export with
 Validate with `python source/test_alpine_assets.py --theme cartoon`.
 The shared exporter supports both complete art packs. Native Windows/Proton
 gameplay and live rendering have not been tested in this environment.
+
+## v1.5 Cinematic Super Super HD
+
+The existing **Super Super HD** menu option selects a new dedicated art pack
+with detailed adult player/equipment materials, polished stylized toy enemies,
+refined VFX, a premium HUD and an upgraded industrial backdrop. All 109 sprite
+textures export at 4x original canvas resolution. This is an AAA-inspired art
+finish within the original 2D renderer; gameplay and hitboxes are unchanged.
+
+The cinematic pack lives separately in assets/game/cinematic. The previous
+supersuperhd files stay available as fallbacks and remain the basis for Cel
+Shaded, so that option and all other themes retain their existing artwork.
+
+Atlas sources are in source/cinematic_art. Re-export using
+`python source/export_alpine_sprites.py --theme cinematic --atlases source/cinematic_art`.
+Validate using `python source/test_alpine_assets.py --theme cinematic`.
+Windows/Proton live gameplay has not been tested in this environment.

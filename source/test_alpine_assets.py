@@ -4,7 +4,7 @@ import json,argparse
 from PIL import Image,ImageChops
 from export_alpine_sprites import source_image
 assets=Path(__file__).resolve().parents[1]/'assets'
-original=assets/'game/data';ap=argparse.ArgumentParser();ap.add_argument('--theme',choices=['alpine','cartoon'],default='alpine');args=ap.parse_args()
+original=assets/'game/data';ap=argparse.ArgumentParser();ap.add_argument('--theme',choices=['alpine','cartoon','cinematic'],default='alpine');args=ap.parse_args()
 alpine=assets/f'game/{args.theme}'
 manifest=json.loads((alpine/'manifest.json').read_text())
 expected={str(p.relative_to(original)).lower():p for p in original.rglob('*')
@@ -14,7 +14,7 @@ assert listed==set(expected), f'Missing: {set(expected)-listed}; extra: {listed-
 for rel,src in expected.items():
     im=Image.open(alpine/'data'/rel).convert('RGBA');ref=source_image(src)
     assert im.size==(ref.width*4,ref.height*4),rel
-    if args.theme=='cartoon':
+    if args.theme in ('cartoon','cinematic'):
         box=im.getchannel('A').getbbox();assert box is not None,rel
         target=ref.getchannel('A').getbbox()
         if 'game_over' in rel:

@@ -13,9 +13,11 @@ code=r'''
 #include <cstdlib>
 #include <string>
 #include <cassert>
+static bool cinematic=false;
 static bool installed[7]={true,true,true,true,true,true,true};
 #define INVALID_FILE_ATTRIBUTES (-1)
 int GetFileAttributesA(const char *p) {
+ if(std::string(p)=="game/cinematic/manifest.json") return cinematic ? 0 : -1;
  const char *names[]={"", "game/hd/manifest.json", "game/superhd/manifest.json", "game/supersuperhd/manifest.json"};
  for(int i=1;i<4;++i) if(std::string(p)==names[i]) return installed[i] ? 0 : -1;
  if(std::string(p)=="game/alpine/manifest.json") return installed[6] ? 0 : -1;
@@ -64,6 +66,10 @@ int main() {
  assert(std::string(NativeArtLabel(6))=="ALPINE DUSK");
  artOverride=-1;
  setenv("DBX_ORIGINAL_ART","1",1); assert(NativeArtSkin()==nullptr);
+ cinematic=true; assert(NativeSetArtMode(3)); assert(std::string(NativeArtSkin())=="cinematic");
+ installed[3]=false; assert(NativeHasArtMode(3));
+ cinematic=false; assert(!NativeHasArtMode(3));
+ installed[3]=true; assert(std::string(NativeArtSkin())=="supersuperhd");
  printf("PASS: %d seven-mode transitions across all pack availability combinations; defaults, overrides, invalid modes\n",checks);
 }
 
