@@ -2,9 +2,9 @@
 
 Native Windows port of Dead Babies Xtreme, the Xbox homebrew game by **Chris Friesen** and credited contributors. Built from the available C++ game source with native Windows graphics, audio, and input.
 
-**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Alpine-Dusk-x64-v1.2.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
+**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Alpine-Sprites-x64-v1.3.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
 
-The latest Windows build adds Alpine Dusk graphics and makes Exit Game in the pause menu return to the main menu. The prior release remains available.
+The latest Windows build expands Alpine Dusk with a complete 109-texture sprite art pack and keeps Exit Game in the pause menu returning to the main menu. The prior release remains available.
 
 ## Run
 
@@ -28,7 +28,7 @@ For Steam on Linux, run the Windows executable using a compatible Proton version
 ## Features
 
 - Original, HD, Super HD, Super Super HD, Cel Shaded, Cartoon, and Alpine Dusk graphics.
-- Alpine Dusk: an original faceted mountain-and-pine background, a pastel dusk palette, cooler terrain, and simplified sprite shading inspired by over the hill. It retains the 2D game and original sprite silhouettes.
+- Alpine Dusk: an original faceted mountain-and-pine background, a pastel dusk palette, cooler terrain, and a complete redrawn sprite set inspired by over the hill. It retains the 2D game and original sprite silhouettes.
 - Pause menu Exit Game returns to the main menu; Exit Game on the main menu still closes the application.
 - Four selectable music tracks, including Rock.
 - Local controller multiplayer and optional Mega Weapons.
@@ -70,5 +70,19 @@ alpha preservation, and package integrity. Windows/Proton gameplay, audio and
 controller hardware testing were not available in the build environment.
 The original 4:3 viewport, four music tracks and earlier graphics modes remain.
 
-Reference: https://store.steampowered.com/app/2929250/ . The new background is
+Reference: https://store.steampowered.com/app/2929250/ . The background and sprite redraws are
 original generated artwork. No assets from over the hill are distributed.
+
+## v1.3 Alpine sprite pack
+
+Alpine Dusk now supplies dedicated artwork for all 109 non-background PNG
+textures: 40 player parts/icons across four colours, 25 enemy/balloon frames,
+14 pickups, 28 weapon/effect/cursor/debris textures, and two HUD textures.
+Every sprite exports on a canvas four times the original dimensions. Alpha
+masks and pivots come from the original textures; game collision and animation
+code are unchanged. Life icons reuse matching torso/leg artwork. The v1.2
+landscape is unchanged. Other graphics modes continue using their own artwork.
+
+Atlas source sheets and layout are in source/alpine_art. With Pillow installed,
+re-export using `python source/export_alpine_sprites.py --atlases source/alpine_art`.
+Run `python source/test_alpine_assets.py` to check full coverage and alpha masks.
