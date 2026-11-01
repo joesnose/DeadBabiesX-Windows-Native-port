@@ -1,0 +1,1474 @@
+{
+  "players": {
+    "cols": 7,
+    "rows": 7,
+    "cell": 256,
+    "size": [
+      1792,
+      1792
+    ],
+    "entries": [
+      {
+        "file": "Player/Blue/Blue_0.png",
+        "rect": [
+          12,
+          12,
+          244,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_45.png",
+        "rect": [
+          268,
+          12,
+          500,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_90.png",
+        "rect": [
+          524,
+          12,
+          756,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_Legs_1.png",
+        "rect": [
+          780,
+          12,
+          1012,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_Legs_2.png",
+        "rect": [
+          1036,
+          12,
+          1268,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_Legs_3.png",
+        "rect": [
+          1292,
+          12,
+          1524,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_Legs_4.png",
+        "rect": [
+          1548,
+          12,
+          1780,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_Legs_Stand.png",
+        "rect": [
+          12,
+          268,
+          244,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_Lives.png",
+        "rect": [
+          268,
+          268,
+          500,
+          500
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Player/Blue/Blue_Stand.png",
+        "rect": [
+          524,
+          268,
+          756,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_0.png",
+        "rect": [
+          780,
+          268,
+          1012,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_45.png",
+        "rect": [
+          1036,
+          268,
+          1268,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_90.png",
+        "rect": [
+          1292,
+          268,
+          1524,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_Legs_1.png",
+        "rect": [
+          1548,
+          268,
+          1780,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_Legs_2.png",
+        "rect": [
+          12,
+          524,
+          244,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_Legs_3.png",
+        "rect": [
+          268,
+          524,
+          500,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_Legs_4.png",
+        "rect": [
+          524,
+          524,
+          756,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_Legs_Stand.png",
+        "rect": [
+          780,
+          524,
+          1012,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Green/Green_Lives.png",
+        "rect": [
+          1036,
+          524,
+          1268,
+          756
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Player/Green/Green_Stand.png",
+        "rect": [
+          1292,
+          524,
+          1524,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_0.png",
+        "rect": [
+          1548,
+          524,
+          1780,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_45.png",
+        "rect": [
+          12,
+          780,
+          244,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_90.png",
+        "rect": [
+          268,
+          780,
+          500,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_Legs_1.png",
+        "rect": [
+          524,
+          780,
+          756,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_Legs_2.png",
+        "rect": [
+          780,
+          780,
+          1012,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_Legs_3.png",
+        "rect": [
+          1036,
+          780,
+          1268,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_Legs_4.png",
+        "rect": [
+          1292,
+          780,
+          1524,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_Legs_Stand.png",
+        "rect": [
+          1548,
+          780,
+          1780,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Red/Red_Lives.png",
+        "rect": [
+          12,
+          1036,
+          244,
+          1268
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Player/Red/Red_Stand.png",
+        "rect": [
+          268,
+          1036,
+          500,
+          1268
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_0.png",
+        "rect": [
+          524,
+          1036,
+          756,
+          1268
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_45.png",
+        "rect": [
+          780,
+          1036,
+          1012,
+          1268
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_90.png",
+        "rect": [
+          1036,
+          1036,
+          1268,
+          1268
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_Legs_1.png",
+        "rect": [
+          1292,
+          1036,
+          1524,
+          1268
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_Legs_2.png",
+        "rect": [
+          1548,
+          1036,
+          1780,
+          1268
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_Legs_3.png",
+        "rect": [
+          12,
+          1292,
+          244,
+          1524
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_Legs_4.png",
+        "rect": [
+          268,
+          1292,
+          500,
+          1524
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_Legs_Stand.png",
+        "rect": [
+          524,
+          1292,
+          756,
+          1524
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_Lives.png",
+        "rect": [
+          780,
+          1292,
+          1012,
+          1524
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Player/Yellow/Yellow_Stand.png",
+        "rect": [
+          1036,
+          1292,
+          1268,
+          1524
+        ],
+        "size": [
+          64,
+          64
+        ]
+      }
+    ]
+  },
+  "babies": {
+    "cols": 5,
+    "rows": 5,
+    "cell": 256,
+    "size": [
+      1280,
+      1280
+    ],
+    "entries": [
+      {
+        "file": "Babies/1_Balloon.png",
+        "rect": [
+          12,
+          12,
+          244,
+          244
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/2_Balloon.png",
+        "rect": [
+          268,
+          12,
+          500,
+          244
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/3_Balloon.png",
+        "rect": [
+          524,
+          12,
+          756,
+          244
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/4_Balloon.png",
+        "rect": [
+          780,
+          12,
+          1012,
+          244
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/5_Balloon.png",
+        "rect": [
+          1036,
+          12,
+          1268,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Babies/6_Balloon.png",
+        "rect": [
+          12,
+          268,
+          244,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Babies/7_Balloon.png",
+        "rect": [
+          268,
+          268,
+          500,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Babies/8_Balloon.png",
+        "rect": [
+          524,
+          268,
+          756,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Babies/BabyBalloon.png",
+        "rect": [
+          780,
+          268,
+          1012,
+          500
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/BabyBalloon1.png",
+        "rect": [
+          1036,
+          268,
+          1268,
+          500
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/BabyBalloon2.png",
+        "rect": [
+          12,
+          524,
+          244,
+          756
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/BabyBalloon3.png",
+        "rect": [
+          268,
+          524,
+          500,
+          756
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_Bomb.png",
+        "rect": [
+          524,
+          524,
+          756,
+          756
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_GetUp_1.png",
+        "rect": [
+          780,
+          524,
+          1012,
+          756
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_GetUp_2.png",
+        "rect": [
+          1036,
+          524,
+          1268,
+          756
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_GetUp_3.png",
+        "rect": [
+          12,
+          780,
+          244,
+          1012
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_GetUp_4.png",
+        "rect": [
+          268,
+          780,
+          500,
+          1012
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_Stand.png",
+        "rect": [
+          524,
+          780,
+          756,
+          1012
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_Walk_1.png",
+        "rect": [
+          780,
+          780,
+          1012,
+          1012
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_Walk_2.png",
+        "rect": [
+          1036,
+          780,
+          1268,
+          1012
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_Walk_3.png",
+        "rect": [
+          12,
+          1036,
+          244,
+          1268
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_Walk_4.png",
+        "rect": [
+          268,
+          1036,
+          500,
+          1268
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Baby_Walk_5.png",
+        "rect": [
+          524,
+          1036,
+          756,
+          1268
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/Balloon.png",
+        "rect": [
+          780,
+          1036,
+          1012,
+          1268
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Babies/DeadBaby.png",
+        "rect": [
+          1036,
+          1036,
+          1268,
+          1268
+        ],
+        "size": [
+          32,
+          32
+        ]
+      }
+    ]
+  },
+  "pickups": {
+    "cols": 4,
+    "rows": 4,
+    "cell": 256,
+    "size": [
+      1024,
+      1024
+    ],
+    "entries": [
+      {
+        "file": "Crates/Crate.png",
+        "rect": [
+          12,
+          12,
+          244,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/FlameThrower_Crate.png",
+        "rect": [
+          268,
+          12,
+          500,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Gravity_Crate.png",
+        "rect": [
+          524,
+          12,
+          756,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Grenade_Crate.png",
+        "rect": [
+          780,
+          12,
+          1012,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Gun_Crate.png",
+        "rect": [
+          12,
+          268,
+          244,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/IonCannon_Crate.png",
+        "rect": [
+          268,
+          268,
+          500,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Nuke_Crate.png",
+        "rect": [
+          524,
+          268,
+          756,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Paracute.png",
+        "rect": [
+          780,
+          268,
+          1012,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Plasma_Crate.png",
+        "rect": [
+          12,
+          524,
+          244,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Rail_Crate.png",
+        "rect": [
+          268,
+          524,
+          500,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Random_Crate.png",
+        "rect": [
+          524,
+          524,
+          756,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Rocket_Crate.png",
+        "rect": [
+          780,
+          524,
+          1012,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Shield_Crate.png",
+        "rect": [
+          12,
+          780,
+          244,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Crates/Time_Crate.png",
+        "rect": [
+          268,
+          780,
+          500,
+          1012
+        ],
+        "size": [
+          64,
+          64
+        ]
+      }
+    ]
+  },
+  "effects": {
+    "cols": 6,
+    "rows": 6,
+    "cell": 256,
+    "size": [
+      1536,
+      1536
+    ],
+    "entries": [
+      {
+        "file": "Aimers/Aimer_Blue.png",
+        "rect": [
+          12,
+          12,
+          244,
+          244
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Aimers/Aimer_Green.png",
+        "rect": [
+          268,
+          12,
+          500,
+          244
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Aimers/Aimer_Red.png",
+        "rect": [
+          524,
+          12,
+          756,
+          244
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Aimers/Aimer_Yellow.png",
+        "rect": [
+          780,
+          12,
+          1012,
+          244
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Gibs/Gib1.PNG",
+        "rect": [
+          1036,
+          12,
+          1268,
+          244
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Gibs/Gib2.PNG",
+        "rect": [
+          1292,
+          64,
+          1524,
+          191
+        ],
+        "size": [
+          51,
+          28
+        ]
+      },
+      {
+        "file": "Gibs/Gib3.PNG",
+        "rect": [
+          12,
+          268,
+          244,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Gibs/Gib4.PNG",
+        "rect": [
+          268,
+          268,
+          500,
+          500
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Gibs/Gib5.PNG",
+        "rect": [
+          524,
+          268,
+          756,
+          500
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Gibs/Gib6.PNG",
+        "rect": [
+          780,
+          268,
+          1012,
+          500
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Particles/Boost_Particle.png",
+        "rect": [
+          1036,
+          268,
+          1268,
+          500
+        ],
+        "size": [
+          16,
+          16
+        ]
+      },
+      {
+        "file": "Particles/Particle.png",
+        "rect": [
+          1292,
+          268,
+          1524,
+          500
+        ],
+        "size": [
+          16,
+          16
+        ]
+      },
+      {
+        "file": "Particles/Rail_Particle.png",
+        "rect": [
+          12,
+          524,
+          244,
+          756
+        ],
+        "size": [
+          16,
+          16
+        ]
+      },
+      {
+        "file": "Weapons/Bullet_Tracer.png",
+        "rect": [
+          268,
+          524,
+          500,
+          756
+        ],
+        "size": [
+          8,
+          8
+        ]
+      },
+      {
+        "file": "Weapons/Grenade.png",
+        "rect": [
+          524,
+          524,
+          756,
+          756
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Weapons/Muzzle_Flash_1.PNG",
+        "rect": [
+          780,
+          524,
+          1012,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Weapons/Muzzle_Flash_2.PNG",
+        "rect": [
+          1036,
+          524,
+          1268,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Weapons/Muzzle_Flash_3.PNG",
+        "rect": [
+          1292,
+          524,
+          1524,
+          756
+        ],
+        "size": [
+          64,
+          64
+        ]
+      },
+      {
+        "file": "Weapons/Plasma.png",
+        "rect": [
+          12,
+          780,
+          244,
+          1012
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Weapons/Power_Bar.png",
+        "rect": [
+          268,
+          780,
+          500,
+          1012
+        ],
+        "size": [
+          16,
+          16
+        ]
+      },
+      {
+        "file": "Weapons/Power_Bar_Box.png",
+        "rect": [
+          524,
+          780,
+          756,
+          1012
+        ],
+        "size": [
+          16,
+          16
+        ]
+      },
+      {
+        "file": "Weapons/Rail_Tracer.png",
+        "rect": [
+          780,
+          780,
+          1012,
+          1012
+        ],
+        "size": [
+          8,
+          8
+        ]
+      },
+      {
+        "file": "Weapons/Rocket.png",
+        "rect": [
+          1036,
+          780,
+          1268,
+          1012
+        ],
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "file": "Weapons/corona.png",
+        "rect": [
+          1292,
+          838,
+          1524,
+          954
+        ],
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "file": "Weapons/fire.png",
+        "rect": [
+          12,
+          1036,
+          244,
+          1268
+        ],
+        "size": [
+          16,
+          16
+        ]
+      },
+      {
+        "file": "Weapons/rocket_smoke.png",
+        "rect": [
+          268,
+          1036,
+          500,
+          1268
+        ],
+        "size": [
+          16,
+          16
+        ]
+      },
+      {
+        "file": "Weapons/smoke.png",
+        "rect": [
+          524,
+          1036,
+          756,
+          1268
+        ],
+        "size": [
+          16,
+          16
+        ]
+      },
+      {
+        "file": "Weapons/spark.png",
+        "rect": [
+          780,
+          1036,
+          1012,
+          1268
+        ],
+        "size": [
+          8,
+          8
+        ]
+      }
+    ]
+  },
+  "hud": {
+    "cols": 2,
+    "rows": 2,
+    "cell": 256,
+    "size": [
+      512,
+      512
+    ],
+    "entries": [
+      {
+        "file": "GUI/game_over.png",
+        "rect": [
+          12,
+          12,
+          244,
+          244
+        ],
+        "size": [
+          512,
+          512
+        ]
+      },
+      {
+        "file": "GUI/gui_box.png",
+        "rect": [
+          268,
+          70,
+          500,
+          186
+        ],
+        "size": [
+          256,
+          128
+        ]
+      }
+    ]
+  }
+}

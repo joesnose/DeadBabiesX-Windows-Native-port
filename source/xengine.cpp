@@ -621,7 +621,7 @@ IDirect3DTexture8 *CXEngine::LoadTexture(const char *name) {
   std::string filename = path(name);
   bool replacementArt = false;
   const char *skin = NativeArtSkin();
-  if (skin && std::string(skin) != "cartoon") {
+  if (skin) {
     std::string relative = name;
     if (relative.size() > 2 && relative[1] == ':') relative = relative.substr(3);
     for (char &c : relative) {
@@ -631,7 +631,7 @@ IDirect3DTexture8 *CXEngine::LoadTexture(const char *name) {
     std::vector<const char *> packs{skin};
     if (std::string(skin) == "celshaded") packs.push_back("supersuperhd");
     if (std::string(skin) == "supersuperhd" || std::string(skin) == "celshaded") packs.push_back("superhd");
-    if (std::string(skin) != "hd") packs.push_back("hd");
+    if (std::string(skin) != "hd" && std::string(skin) != "cartoon") packs.push_back("hd");
     for (size_t i = 0; i < packs.size(); ++i) {
       std::string replacement = std::string("game/") + packs[i] + "/" + relative;
       if (GetFileAttributesA(replacement.c_str()) != INVALID_FILE_ATTRIBUTES) {
@@ -688,7 +688,7 @@ IDirect3DTexture8 *CXEngine::LoadTexture(const char *name) {
       if (pixels[i] == 0 && pixels[i + 1] == 0 && pixels[i + 2] == 0)
         pixels[i + 3] = 0;
   if (alpine && filename.find("game/alpine/") != 0) AlpineDuskPixels(pixels, texture->width, texture->height, filename);
-  if (cartoon) NativeApplyCartoon(pixels, texture->width, texture->height);
+  if (cartoon && filename.find("game/cartoon/") != 0) NativeApplyCartoon(pixels, texture->width, texture->height);
   if (celShaded) NativeApplyCelShading(pixels, texture->width, texture->height);
   if (replacementArt || cartoon)
     fprintf(stderr, "ART %s: %s (%ux%u)\n", skin, filename.c_str(),

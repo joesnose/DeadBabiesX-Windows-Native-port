@@ -2,9 +2,9 @@
 
 Native Windows port of Dead Babies Xtreme, the Xbox homebrew game by **Chris Friesen** and credited contributors. Built from the available C++ game source with native Windows graphics, audio, and input.
 
-**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Alpine-Sprites-x64-v1.3.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
+**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Classic-Cartoon-x64-v1.4.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
 
-The latest Windows build expands Alpine Dusk with a complete 109-texture sprite art pack and keeps Exit Game in the pause menu returning to the main menu. The prior release remains available.
+The latest Windows build upgrades Cartoon with 109 dedicated flat, ink-outlined sprite textures. Alpine Dusk and the pause-menu fix remain intact. The prior release remains available.
 
 ## Run
 
@@ -86,3 +86,20 @@ landscape is unchanged. Other graphics modes continue using their own artwork.
 Atlas source sheets and layout are in source/alpine_art. With Pillow installed,
 re-export using `python source/export_alpine_sprites.py --atlases source/alpine_art`.
 Run `python source/test_alpine_assets.py` to check full coverage and alpha masks.
+
+## v1.4 Classic Cartoon upgrade
+
+Select the existing **Cartoon** graphics option for a complete hand-drawn-style
+sprite pack: solid colour fills, bold dark contours, rounded forms and simple
+cel shadows. All 109 non-background sprite PNGs are supplied: players in four
+colours, enemies and balloon frames, pickups, weapons, effects, cursors, debris
+and HUD. Canvas resolution is 4x the original; module positions and pivots
+retain animation alignment. Life icons use matching torso and leg artwork.
+Alpine Dusk artwork is unchanged. Backgrounds and any missing custom textures
+retain the existing Cartoon filter fallback.
+
+Atlas sources are in source/cartoon_art. Re-export with
+`python source/export_alpine_sprites.py --theme cartoon --atlases source/cartoon_art`.
+Validate with `python source/test_alpine_assets.py --theme cartoon`.
+The shared exporter supports both complete art packs. Native Windows/Proton
+gameplay and live rendering have not been tested in this environment.
