@@ -1,5 +1,5 @@
 DEAD BABIES X — WINDOWS NATIVE PORT
-Latest Windows build: Rock music and louder game-over/winner announcements.
+Windows v1.2: Alpine Dusk graphics and pause Exit returns to the main menu.
 
 Extract the entire ZIP into a folder, then run DeadBabiesXNative.exe.
 Keep libwinpthread-1.dll and the game folder beside the executable.
@@ -18,5 +18,9 @@ Q/E specials, Enter confirms/joins/pauses, Escape opens the pause menu.
 F11 or Alt+Enter toggles fullscreen/windowed mode.
 For Steam on Linux, use the Windows executable through a compatible Proton version.
 
-This package preserves the final Windows executable and runtime DLL unchanged.
+Select GRAPHICS: ALPINE DUSK from the main or pause menu.
+This new theme uses a faceted alpine dusk background and stylised sprite colours.
+Pause > Exit Game returns to the main menu. Main menu > Exit Game closes the app.
+The original 4:3 aspect ratio and black side borders are retained.
+The executable is rebuilt; four music tracks and existing graphics modes remain.
 Original game/code/art: Chris Friesen and credited contributors. See notices/.

@@ -3,7 +3,8 @@
 #include "ui_style.h"
 Frontend::Frontend() {
   const char *skin = NativeArtSkin();
-  artMode = skin && std::string(skin) == "cartoon" ? 5 :
+  artMode = skin && std::string(skin) == "alpine" ? 6 :
+            skin && std::string(skin) == "cartoon" ? 5 :
             skin && std::string(skin) == "celshaded" ? 4 :
             skin && std::string(skin) == "supersuperhd" ? 3 :
             skin && std::string(skin) == "superhd" ? 2 :
@@ -83,7 +84,7 @@ MenuAction Frontend::Update() {
       inputArmed = true;
     return MenuAction::None;
   }
-  int count = paused ? 5 : 6;
+  int count = paused ? 4 : 6;
   if (direction && heldDirection != direction) {
     selection = (selection + direction + count) % count;
     fprintf(stderr, "MENU selection %d\n", selection);
@@ -114,8 +115,7 @@ MenuAction Frontend::Update() {
   if (!confirm) return MenuAction::None;
   if (paused) {
     if (selection == 0) return MenuAction::Resume;
-    if (selection == 3) return MenuAction::Title;
-    return MenuAction::Exit;
+    return MenuAction::Title;
   }
   return selection == 0 ? MenuAction::Start : MenuAction::Exit;
 }
@@ -135,8 +135,8 @@ MenuAction Frontend::ToggleMusic(int delta) {
 MenuAction Frontend::ToggleArt(int delta) {
   // Skip missing packs in either direction; Original always remains available.
   int next = artMode;
-  for (int attempt = 0; attempt < 6; ++attempt) {
-    next = (next + delta + 6) % 6;
+  for (int attempt = 0; attempt < 7; ++attempt) {
+    next = (next + delta + 7) % 7;
     if (NativeSetArtMode(next)) break;
   }
   if (next == artMode) return MenuAction::None;
@@ -162,11 +162,11 @@ void Frontend::Draw() {
   XEngine->DrawUiText("DEAD BABIES X",320,42,32,245,228,199,true);
   XEngine->FillRect(276,84,88,2,.78f,.23f,.13f,1);
   XEngine->DrawUiText(paused?"PAUSED":"XTREME EDITION",320,98,12,195,148,104,true);
-  const int count=paused?5:6;
+  const int count=paused?4:6;
   const float panelY=paused?150.f:130.f;
   const float top=paused?190.f:170.f;
   const float rowHeight=35.f;
-  NativeUiPanel(112,panelY,416,paused?236.f:264.f);
+  NativeUiPanel(112,panelY,416,paused?201.f:264.f);
   XEngine->DrawUiText(paused?"ROUND PAUSED":"ARENA SETUP",132,panelY+13,10,175,149,116,false);
   XEngine->FillRect(462,panelY+16,4,4,paused?.85f:.38f,paused?.44f:.63f,.20f,1);
   XEngine->DrawUiText(paused?"HOLD":"READY",510,panelY+13,10,160,145,122,true);
@@ -177,7 +177,7 @@ void Frontend::Draw() {
   snprintf(musicText,sizeof(musicText),"MUSIC: < %s >",NativeMusicLabel(NativeMusicChoice()));
   snprintf(megaText,sizeof(megaText),"MEGA WEAPONS: < %s >",megaWeapons?"ON":"OFF");
   const char *titleItems[]={"START GAME",playersText,graphicsText,musicText,megaText,"EXIT GAME"};
-  const char *pauseItems[]={"RESUME",graphicsText,musicText,"TITLE SCREEN","EXIT GAME"};
+  const char *pauseItems[]={"RESUME",graphicsText,musicText,"EXIT GAME"};
   for(int i=0;i<count;++i) {
     const float y=top+i*rowHeight;const bool active=i==selection;
     XEngine->FillRect(132,y-4,376,30,active?.27f:.075f,active?.075f:.062f,active?.042f:.051f,1);

@@ -13,11 +13,12 @@ code=r'''
 #include <cstdlib>
 #include <string>
 #include <cassert>
-static bool installed[6]={true,true,true,true,true,true};
+static bool installed[7]={true,true,true,true,true,true,true};
 #define INVALID_FILE_ATTRIBUTES (-1)
 int GetFileAttributesA(const char *p) {
  const char *names[]={"", "game/hd/manifest.json", "game/superhd/manifest.json", "game/supersuperhd/manifest.json"};
  for(int i=1;i<4;++i) if(std::string(p)==names[i]) return installed[i] ? 0 : -1;
+ if(std::string(p)=="game/alpine/manifest.json") return installed[6] ? 0 : -1;
  return -1;
 }
 ''' +engine+r'''
@@ -29,14 +30,15 @@ struct Frontend { int artMode=0; void *backdrop=nullptr; MenuAction ToggleArt(in
 int main() {
  Frontend f;
  int checks=0;
- for(int mask=0;mask<8;++mask) {
+ for(int mask=0;mask<16;++mask) {
   for(int mode=1;mode<4;++mode) installed[mode]=(mask & (1<<(mode-1)))!=0;
-  for(int start=0;start<6;++start) {
+  installed[6]=(mask & 8)!=0;
+  for(int start=0;start<7;++start) {
    if(!installed[start]) continue;
    for(int direction : {1,-1}) {
     f.artMode=start; assert(NativeSetArtMode(start));
     int expected=start;
-    do { expected=(expected+direction+6)%6; } while(!installed[expected]);
+    do { expected=(expected+direction+7)%7; } while(!installed[expected]);
     MenuAction result=f.ToggleArt(direction);
     assert(f.artMode==expected);
     assert(result==(expected==start ? MenuAction::None : MenuAction::ArtChanged));
@@ -46,7 +48,7 @@ int main() {
  }
  for(int i=0;i<4;++i) installed[i]=true;
  assert(NativeSetArtMode(3)); assert(std::string(NativeArtSkin())=="supersuperhd");
- assert(!NativeSetArtMode(6)); assert(!NativeSetArtMode(-1));
+ assert(!NativeSetArtMode(7)); assert(!NativeSetArtMode(-1));
  assert(std::string(NativeArtSkin())=="supersuperhd");
  assert(std::string(NativeArtLabel(3))=="SUPER SUPER HD");
  artOverride=-1; unsetenv("DBX_CARTOON"); unsetenv("DBX_CEL_SHADED"); unsetenv("DBX_ORIGINAL_ART"); unsetenv("DBX_SUPER_HD"); unsetenv("DBX_SUPER_SUPER_HD");
@@ -58,9 +60,11 @@ int main() {
  artOverride=-1;
  setenv("DBX_CARTOON","1",1); assert(std::string(NativeArtSkin())=="cartoon");
  assert(NativeSetArtMode(5)); assert(std::string(NativeArtLabel(5))=="CARTOON");
+ installed[6]=true; assert(NativeSetArtMode(6)); assert(std::string(NativeArtSkin())=="alpine");
+ assert(std::string(NativeArtLabel(6))=="ALPINE DUSK");
  artOverride=-1;
  setenv("DBX_ORIGINAL_ART","1",1); assert(NativeArtSkin()==nullptr);
- printf("PASS: %d six-mode transitions across all pack availability combinations; defaults, overrides, invalid modes\n",checks);
+ printf("PASS: %d seven-mode transitions across all pack availability combinations; defaults, overrides, invalid modes\n",checks);
 }
 
 '''

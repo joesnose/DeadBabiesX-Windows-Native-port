@@ -2,9 +2,9 @@
 
 Native Windows port of Dead Babies Xtreme, the Xbox homebrew game by **Chris Friesen** and credited contributors. Built from the available C++ game source with native Windows graphics, audio, and input.
 
-**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Native-x64-fixed.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
+**[Download the latest Windows x64 build](downloads/DeadBabiesX-Windows-Alpine-Dusk-x64-v1.2.zip?raw=true)** · [SHA256 checksum](downloads/SHA256SUMS)
 
-This repository contains one Windows build: the final Rock-and-louder-announcements version. Earlier builds and unrelated projects are excluded.
+The latest Windows build adds Alpine Dusk graphics and makes Exit Game in the pause menu return to the main menu. The prior release remains available.
 
 ## Run
 
@@ -21,13 +21,15 @@ The four `.ogg` files must also stay beside the EXE because the Music menu loads
 | `acid-house.ogg` | Acid House |
 | `rock.ogg` | Rock |
 
-All optional `.cmd` launchers have been removed. Graphics and music can be selected from the game menus. The executable and runtime DLL are unchanged from the latest Windows package.
+All optional `.cmd` launchers have been removed. Graphics and music can be selected from the game menus. The executable is rebuilt for this update; the required runtime DLL is bundled.
 
 For Steam on Linux, run the Windows executable using a compatible Proton version.
 
 ## Features
 
-- Original, HD, Super HD, Super Super HD, Cel Shaded, and Cartoon graphics.
+- Original, HD, Super HD, Super Super HD, Cel Shaded, Cartoon, and Alpine Dusk graphics.
+- Alpine Dusk: an original faceted mountain-and-pine background, a pastel dusk palette, cooler terrain, and simplified sprite shading inspired by over the hill. It retains the 2D game and original sprite silhouettes.
+- Pause menu Exit Game returns to the main menu; Exit Game on the main menu still closes the application.
 - Four selectable music tracks, including Rock.
 - Local controller multiplayer and optional Mega Weapons.
 - Title/pause menus and animated winner/score results.
@@ -59,3 +61,14 @@ The ready-to-play ZIP contains runtime files and notices; source and development
 Original game/code/art: Chris Friesen and the contributors named in [the original game readme](notices/ORIGINAL-GAME.txt). The native port and subsequent additions were developed with AI assistance. Original credits and component licences remain applicable; see `notices/` and the notices embedded in vendored source. No new blanket licence is applied to the game or artwork.
 
 Android is maintained separately: [DeadBabiesX Android](https://github.com/joesnose/DeadBabiesX-Android-recompilation).
+
+## Alpine Dusk update validation
+
+Built with MinGW-w64 for Windows x64. Checks passed for 160 graphics-mode
+transitions, missing-pack handling, pause versus title Exit actions, palette
+alpha preservation, and package integrity. Windows/Proton gameplay, audio and
+controller hardware testing were not available in the build environment.
+The original 4:3 viewport, four music tracks and earlier graphics modes remain.
+
+Reference: https://store.steampowered.com/app/2929250/ . The new background is
+original generated artwork. No assets from over the hill are distributed.

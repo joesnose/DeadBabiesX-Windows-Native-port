@@ -1,6 +1,7 @@
 #include "xengine.h"
 #include "cel_shading.h"
 #include "cartoon_shading.h"
+#include "alpine_dusk.h"
 #undef XInputSetState
 #include <GL/gl.h>
 #include <mmsystem.h>
@@ -583,13 +584,14 @@ void CXEngine::XUpdate() {
 }
 static int artOverride = -1;
 const char *NativeArtLabel(int mode) {
-  return mode == 5 ? "CARTOON" : mode == 4 ? "CEL SHADED" : mode == 3 ? "SUPER SUPER HD" : mode == 2 ? "SUPER HD" : mode == 1 ? "HD" : "ORIGINAL";
+  return mode == 6 ? "ALPINE DUSK" : mode == 5 ? "CARTOON" : mode == 4 ? "CEL SHADED" : mode == 3 ? "SUPER SUPER HD" : mode == 2 ? "SUPER HD" : mode == 1 ? "HD" : "ORIGINAL";
 }
 bool NativeHasArtMode(int mode) {
   if (mode == 0 || mode == 4 || mode == 5) return true;
   const char *manifest = mode == 1 ? "game/hd/manifest.json" :
                          mode == 2 ? "game/superhd/manifest.json" :
-                         mode == 3 ? "game/supersuperhd/manifest.json" : nullptr;
+                         mode == 3 ? "game/supersuperhd/manifest.json" :
+                         mode == 6 ? "game/alpine/manifest.json" : nullptr;
   return manifest && GetFileAttributesA(manifest) != INVALID_FILE_ATTRIBUTES;
 }
 bool NativeSetArtMode(int mode) {
@@ -606,6 +608,7 @@ const char *NativeArtSkin() {
   if (artOverride == 3) return NativeHasArtMode(3) ? "supersuperhd" : nullptr;
   if (artOverride == 4) return "celshaded";
   if (artOverride == 5) return "cartoon";
+  if (artOverride == 6) return NativeHasArtMode(6) ? "alpine" : nullptr;
   if (getenv("DBX_ORIGINAL_ART")) return nullptr;
   if (getenv("DBX_CARTOON")) return "cartoon";
   if (getenv("DBX_CEL_SHADED")) return "celshaded";
@@ -641,7 +644,8 @@ IDirect3DTexture8 *CXEngine::LoadTexture(const char *name) {
 
   const bool celShaded = skin && std::string(skin) == "celshaded";
   const bool cartoon = skin && std::string(skin) == "cartoon";
-  const std::string cacheKey = cartoon ? "cartoon:" + filename : celShaded ? "celshaded:" + filename : filename;
+  const bool alpine = skin && std::string(skin) == "alpine";
+  const std::string cacheKey = alpine ? "alpine:" + filename : cartoon ? "cartoon:" + filename : celShaded ? "celshaded:" + filename : filename;
   auto it = textures.find(cacheKey);
   if (it != textures.end())
     return it->second.get();
@@ -683,6 +687,7 @@ IDirect3DTexture8 *CXEngine::LoadTexture(const char *name) {
     for (size_t i = 0; i < pixels.size(); i += 4)
       if (pixels[i] == 0 && pixels[i + 1] == 0 && pixels[i + 2] == 0)
         pixels[i + 3] = 0;
+  if (alpine && filename.find("game/alpine/") != 0) AlpineDuskPixels(pixels, texture->width, texture->height, filename);
   if (cartoon) NativeApplyCartoon(pixels, texture->width, texture->height);
   if (celShaded) NativeApplyCelShading(pixels, texture->width, texture->height);
   if (replacementArt || cartoon)
