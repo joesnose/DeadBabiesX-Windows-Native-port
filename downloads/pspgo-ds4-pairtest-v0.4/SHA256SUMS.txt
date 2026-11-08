@@ -1,0 +1,2 @@
+a3a06e7ee7d5aa88224297eb171a098c5f4e5e4bdf3491aa31cb00a548d27f90  PSPGo-DS4-pairtest-v0.4.zip
+8bd05f3400a7c07be53508e44b9a64a7945127ae02d29722f0a78d6b1f7a95b1  pspgo_ds4_pairtest.prx
