@@ -1,0 +1,2 @@
+8232638faeb62045ab4105a63af6c2b2978cf88d7573d3356f3ca3dd053c3977  PSPGo-DS4-diagnostic-v0.2.zip
+f2c96856f955c44f4fbaf5451b5aad5cf930e836e516a4f7bcdf8045f9f34465  pspgo_ds4_diag.prx
