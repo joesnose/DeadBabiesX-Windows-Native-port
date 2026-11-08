@@ -118,3 +118,9 @@ A fully generic implementation cannot be honestly claimed until one of these rou
 - PSP firmware symbol catalogue: https://github.com/pspdev/psplibdoc
 
 The notes distinguish direct PSP-code observations, published CSR behavior and untested hypotheses. New source is MIT licensed. Public protocol constants are used as facts; no BlueZ source files, Sony binaries, decompiler output or private captures/logs are redistributed.
+
+## Hardware follow-up: radio probe v1.0
+
+The actual radio accepted three CSR-style GETs through the guarded native transaction API: build 6424 (1918 hex), chip-version code 0005, revision 00E1. INTERFACE_VERSION returned native result 1 with outer status 0050; the original conservative stop rule ended the batch before the mode keys were read. This validates management access and those three returned scalars. It does not identify a particular marketed chip model or establish HCI availability. No exact matching public radio image was located in the initial identifier search.
+
+Probe v1.1 retains the nine-query allowlist, orders mode reads ahead of optional fields, and skips completed 0050 query-error replies while continuing. Negative native returns, other outer errors and malformed responses still stop. The native translation table maps 0050 to 802F0125; its precise selector-error semantics have not been established. This is a completion-policy change, not a new command or firmware/configuration write.
