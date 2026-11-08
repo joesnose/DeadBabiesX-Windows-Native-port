@@ -1,0 +1,33 @@
+{
+  "module_count": 5,
+  "captured_text_bytes": 108176,
+  "decompiled_function_files": 776,
+  "firmware_file_count": 341,
+  "firmware_total_bytes": 43051381,
+  "extensions": {
+    ".dat": 3,
+    ".cer": 1,
+    ".dic": 6,
+    ".pgf": 19,
+    ".bwfon": 1,
+    ".bin": 2,
+    ".prx": 238,
+    ".rsc": 1,
+    ".img": 1,
+    ".2": 1,
+    ".txt": 1,
+    ".bmp": 2,
+    ".rco": 63,
+    ".pmf": 1,
+    ".res": 1
+  },
+  "command_call_candidates": 45,
+  "unique_request_candidates": 33,
+  "named_radio_image_candidates": [],
+  "dfu_suffix_candidates": [],
+  "xuv_text_candidates": [],
+  "elf_machine_counts": {
+    "8": 238
+  },
+  "note": "No matching filename is not proof that no embedded/compressed radio image exists."
+}

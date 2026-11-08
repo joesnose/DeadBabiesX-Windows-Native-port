@@ -1,0 +1,88 @@
+[
+  {
+    "module": "sceBSMan",
+    "text_bytes": 56552,
+    "capture_bytes": 56552,
+    "sha256": "12e26d5b44241756e035ebb4647cfb30461893e135769b0ad51df9f95206ffa2",
+    "export_entries": 216,
+    "unique_export_addresses": 119,
+    "import_entries": 83,
+    "import_libraries": [
+      "InterruptManagerForKernel",
+      "SysclibForKernel",
+      "ThreadManForKernel",
+      "sceHIDSvc_driver",
+      "sceSuspendForKernel",
+      "sceSysEventForKernel",
+      "sceSyscon_driver",
+      "sceUsbBSMCDC_driver",
+      "sceWlanDrv_driver"
+    ]
+  },
+  {
+    "module": "sceHIDSvc",
+    "text_bytes": 20164,
+    "capture_bytes": 20164,
+    "sha256": "6527dfdd4bac826c6b118ac3749589d29466f49e06b583d0b69c5bf9ea929483",
+    "export_entries": 3,
+    "unique_export_addresses": 3,
+    "import_entries": 25,
+    "import_libraries": [
+      "InterruptManagerForKernel",
+      "SysclibForKernel",
+      "ThreadManForKernel",
+      "sceInput_driver",
+      "sceSysEventForKernel"
+    ]
+  },
+  {
+    "module": "sceInput_Library",
+    "text_bytes": 14792,
+    "capture_bytes": 14792,
+    "sha256": "6ede07cb25c27240a4e91b3cc2045aa7698001ed1476974cd66d7db795326276",
+    "export_entries": 31,
+    "unique_export_addresses": 31,
+    "import_entries": 23,
+    "import_libraries": [
+      "SysMemForKernel",
+      "SysclibForKernel",
+      "ThreadManForKernel"
+    ]
+  },
+  {
+    "module": "scePadSvc",
+    "text_bytes": 7548,
+    "capture_bytes": 7548,
+    "sha256": "b13aeeb5a6a4aee43c7947e5b8143a1f0a4649a0820d2e85de7fc8bad56b4a22",
+    "export_entries": 10,
+    "unique_export_addresses": 10,
+    "import_entries": 36,
+    "import_libraries": [
+      "InterruptManagerForKernel",
+      "SysclibForKernel",
+      "ThreadManForKernel",
+      "sceCtrl_driver",
+      "sceInput_driver",
+      "scePower_driver"
+    ]
+  },
+  {
+    "module": "sceUsbBSMCDC_Driver",
+    "text_bytes": 9120,
+    "capture_bytes": 9120,
+    "sha256": "3a437ffec448f730c0ec6268195d85ec552f5ba4da5a02693dfef102aa6ac5b0",
+    "export_entries": 30,
+    "unique_export_addresses": 24,
+    "import_entries": 35,
+    "import_libraries": [
+      "InterruptManagerForKernel",
+      "LoadExecForKernel",
+      "ThreadManForKernel",
+      "UtilsForKernel",
+      "sceLed_driver",
+      "sceSysEventForKernel",
+      "sceSyscon_driver",
+      "sceUsbHost_driver"
+    ]
+  }
+]
