@@ -124,3 +124,28 @@ The notes distinguish direct PSP-code observations, published CSR behavior and u
 The actual radio accepted three CSR-style GETs through the guarded native transaction API: build 6424 (1918 hex), chip-version code 0005, revision 00E1. INTERFACE_VERSION returned native result 1 with outer status 0050; the original conservative stop rule ended the batch before the mode keys were read. This validates management access and those three returned scalars. It does not identify a particular marketed chip model or establish HCI availability. No exact matching public radio image was located in the initial identifier search.
 
 Probe v1.1 retains the nine-query allowlist, orders mode reads ahead of optional fields, and skips completed 0050 query-error replies while continuing. Negative native returns, other outer errors and malformed responses still stop. The native translation table maps 0050 to 802F0125; its precise selector-error semantics have not been established. This is a completion-policy change, not a new command or firmware/configuration write.
+
+## Hardware follow-up: radio probe v1.1
+
+Two complete runs agreed on every returned value:
+
+| Item | Hex | Decimal |
+|---|---:|---:|
+| Build ID | 1918 | 6424 |
+| Chip-version code | 0005 | 5 |
+| Chip revision | 00E1 | 225 |
+| ONCHIP_HCI_CLIENT | 0001 | 1 |
+| USB_VM_CONTROL | 0001 | 1 |
+| HOST_INTERFACE | 0002 | 2 |
+| INITIAL_BOOTMODE | 0001 | 1 |
+| Loader build ID | 1725 | 5925 |
+
+INTERFACE_VERSION again returned outer status 0050, but the batch continued and reached DONE. There are no additional controller-connection results in this identification log.
+
+The radio's own metadata supports the on-chip stack/VM-managed USB architecture inferred from the PSP code. CSR's Bluetooth and USB Design Considerations, Issue 4, explicitly identifies HOST_INTERFACE=2 as USB and USB_VM_CONTROL=true as VM ownership of USB rather than automatic default HCI enumeration. This is evidence about current configuration, not proof of a supported or reversible transition on this exact Sony firmware.
+
+ONCHIP_HCI_CLIENT=1 is consistent with the documented on-chip-client setting. INITIAL_BOOTMODE=1 is recorded without assigning a PSP-specific behavior to that mode number. These results do not identify a particular marketed chip part from CHIP_VERSION=5, reveal the radio executable, establish the DS4 authentication failure, or demonstrate usable raw HCI command/event/ACL pipes.
+
+The next implementation gate is an ownership/transport and recovery design: establish how this build handles temporary configuration versus reset/power loss, determine the actual HCI USB descriptors/endpoints and design the PSP-side host driver before attempting any mode change. A new host driver would need to coexist with or replace the existing CDC binding and preserve a recovery route. No mode/configuration writes have been made or supplied. No further identification repetition is needed at this stage.
+
+Manufacturer reference (third-party-hosted copy): https://hacker.instanet.net/Bluetooth/CS-101412-AN-4.pdf . The raw user log is not published; this section records only non-secret firmware/configuration metadata and bounded conclusions.
