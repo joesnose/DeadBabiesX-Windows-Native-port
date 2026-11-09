@@ -1,0 +1,3 @@
+caa82c865c9a0ab84320859ed4ad5637ca5fcd4d5a5c5afce18dffe39999844a  PSPGo-HCI-Stack-v0.6.zip
+e264909172b19786954a9de87f8f707755cccc95c672571b12dcf43f4f19a1f9  pspgo_hci_transport.prx
+7dee6596a2b47bf1af5b4eb0a71b4c0dae0699bb329cca964aeb2fda863e76fc  README.md
