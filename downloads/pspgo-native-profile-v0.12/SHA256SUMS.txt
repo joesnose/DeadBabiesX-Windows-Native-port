@@ -1,0 +1,3 @@
+6555f55503012fe171462f1f0d4f494c2b3b5cdb3d55375545c15a0994fa8091  PSPGo-Native-Profile-v0.12.zip
+91677eeafbbb98c95645a26f67632bb73d54ebb72ad2b0ec63d0d15f0f2d8dfb  pspgo_hci_transport.prx
+43c76cc9669e7d955b7d28f499e5f737dc2ac5d7c8371bdd8029db7ed01ba714  README.md
