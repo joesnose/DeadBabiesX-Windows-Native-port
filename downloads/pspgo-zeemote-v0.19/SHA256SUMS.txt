@@ -1,0 +1,3 @@
+9eab7f602d19280efcbbefd163c242b2a5ed78999c920e11b5bf2380f7d503cc  PSPGo-Zeemote-v0.19.zip
+be98d2ffdcd490310902bf6e2dcafbd60e98af60aadb4562e21b413b0d35e169  pspgo_hci_transport.prx
+9eb775e3524b1d67077e4a69cbcd20194bc258983d0278124b8c1addad5efad4  README.md
