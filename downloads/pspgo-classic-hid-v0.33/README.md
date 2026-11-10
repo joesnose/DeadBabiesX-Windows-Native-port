@@ -1,0 +1,11 @@
+# PSP Go Classic HID v0.33 — launch wait ownership
+
+Diagnostic build, not a confirmed hang fix. The v0.32 test identified a repeated wait: SceKernelLoadExecThread waits on object03c9947f with native wait_type12, while VSH graphics waits for that launch thread to finish. HID/input threads remain on event waits and plugin heartbeats continue for roughly60seconds. No native teardown begin/end markers were recorded. This narrows the stall to launch, but does not identify which subsystem owns the object or prove a mutex deadlock.
+
+The previous capture queried only semaphore/event status. This version records the public ThreadMan object type and, for callback objects, their name, owning thread and pending count. This version adds the public read-only sceKernelReferMutexStatus query and, if successful, logs the object's name, lock count, owner thread and waiter count, then reads the owner thread's name and wait state. Export lookup occurs on the8192-byte plugin worker. A failed query is logged explicitly. All queries use bounded initialized status structures; no locks are acquired, released or cancelled. No native thread is suspended/woken. Controls, native pairing and teardown behavior remain unchanged. No firmware flashing.
+
+Replace ef0:/seplugins/pspgo_hci_transport.prx, keep VSH/GAME entries and registration, fully restart, keep NES30 off. Connect GameStick, wait5seconds, then launch a game with it on. Leave any hang10seconds before recovery, then send pspgo_hci_transport.log. No re-pairing. Controller off during transitions remains the known workaround.
+
+LIFE_MUTEX_API reports query availability. LIFE_MUTEX gives name/count/owner/waiters; LIFE_OWNER gives the owner's thread state or an explicit failure. LIFE_MUTEX_QUERY is an unsuccessful object query, not proof of corruption. Other LIFE_THREAD/FLAG/SEMA/EVENT markers retain prior meanings. Absence of markers alone is inconclusive if logging stops.
+
+Public ABI references: PSPLibDoc ThreadManForKernel A9C2CB9A and PPSSPP Core/HLE/sceKernelMutex.h field layout. No implementation copied. Own MIT source/tests and SDK notices included. No Sony firmware, private device logs, keys or Bluetooth addresses distributed. Hardware success is unproven.
