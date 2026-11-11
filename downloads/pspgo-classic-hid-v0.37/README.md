@@ -1,0 +1,15 @@
+# PSP Go Classic HID v0.37 — native event-wait capture
+
+Diagnostic build, not a claimed exit fix. Game entry worked on v0.34; exit still failed on v0.36, including after switching GameStick off. The connection light cycles, but that alone does not establish successful native teardown or identify the blocking wait.
+
+Latest capture confirms main-thread ACK0172 callback1 actually returned native timeout802f010e. It ends after heartbeat21 with Impose changing state, without a captured blocked exit thread. Therefore another acknowledgement timeout is not justified by that snapshot. Existing ACK traces do not cover the separate native event-receive routine used by operations after their initial acknowledgement.
+
+This build keeps v0.36 input/pairing/timeout behavior and adds a passive entry observer to that event-receive function. All six native EABI arguments, original result and native timeout pointer are forwarded unchanged; no additional timeouts, fake success, radio commands, lock releases or thread termination are added. A guarded four-word trampoline relocates only the two known position-independent prologue instructions. Module size/alignment/branch and10 prologue words gate installation.
+
+Eight bounded RAM slots record in-flight event receives before/after the native call. EVENT_WAIT logs serial, thread ID, selector count, first four event IDs only, timeout-present, callback mode, done and result. Connection IDs, packet contents, buffers, timeout values, keys and memory dumps are excluded. A full slot array forwards the original without observing it and increments a dropped counter. Completed snapshots may be overwritten before logging, so this is not a complete event history. Long-lived normal event waits are expected; correlate with thread/lock capture. No filesystem calls occur in native observers.
+
+After first valid input, thread snapshots now run every500ms rather than2seconds for up to6minutes, with changed states and10-second refresh. This may catch shorter transition states; it cannot guarantee capture if scheduling or file output stops first. Logger interval remains500ms and reconnect timing is unchanged.
+
+Replace ef0:/seplugins/pspgo_hci_transport.prx, keep VSH/GAME entries and registration, fully restart, and keep NES30 off. Connect GameStick, enter the game, then HOME/quit with it on. Leave any hang15seconds before recovery and send pspgo_hci_transport.log. No re-pairing. This diagnostic may leave the hang unchanged; no exit success is claimed.
+
+Validation: pinned cross-build and18 ASan/UBSan programs pass. Compiled checks verify observer stack48bytes, six argument saves/restores including t0/t1, preserved result, one native invocation on each terminating control-flow path (including full-slot tail forwarding), no original-call retry cycle and direct helper calls limited to thread-ID/IRQ functions. Existing report, ACK and teardown checks pass. These checks do not prove every indirect native stack bound or hardware success. Source/tests are own MIT code with SDK notices; no Sony firmware/disassembly, private raw logs, addresses or keys distributed.
