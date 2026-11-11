@@ -1,0 +1,3 @@
+3be6af3085530a1bce7f1701bb2928a2cd06111421d79da04d16210c6c4beb9c  PSPGo-Classic-HID-v0.38.zip
+6704239c6498dfb66ca52cc60f554bba4a63de928178f937e14bf71ca61ea9a2  pspgo_hci_transport.prx
+7db615ba1b1cdfef67affaac43fc1e9b09e7533f9e1d88b8184b58595837e732  README.md
