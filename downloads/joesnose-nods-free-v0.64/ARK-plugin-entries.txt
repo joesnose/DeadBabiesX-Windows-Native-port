@@ -1,0 +1,2 @@
+vsh, ef0:/seplugins/joesnose_nods_free.prx, on
+game, ef0:/seplugins/joesnose_nods_free.prx, on
