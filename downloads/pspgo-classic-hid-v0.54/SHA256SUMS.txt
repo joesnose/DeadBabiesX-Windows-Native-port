@@ -1,0 +1,5 @@
+3794683e052116eddc0f4474eb0e0d10c5ee2c45cec0bb1c4cac6d45f30e50c6  PSPGo-Classic-HID-v0.54.zip
+47696c2cfecb822450d4551d066d98856eb31ad5d097943a8b137db3611ea5dd  PSPGo-Classic-HID-v0.54-source.zip
+393e31292a742ac3b6148e8b4491ca7bdcf1a2067fc414d6edb6065b6e475177  pspgo_hci_transport.prx
+e3b2a5d545bab42aa916b2b41fe77ef754752fd88345a0bac00d7213e0254ab0  README.md
+a0d6096ad12e31c82799629b73acf4ea82c1df3db47be95ae996aa61a926a21e  ARK-plugin-entries.txt
