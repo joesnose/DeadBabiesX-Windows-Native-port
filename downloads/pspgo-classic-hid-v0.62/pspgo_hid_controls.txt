@@ -1,0 +1,84 @@
+# DS4 / DualSense controls. Edit then fully restart the PSP.
+# Select preset = standard or fps. Uncomment only the overrides you want.
+# Commented bindings below show each preset's defaults; later overrides win.
+# Bindings: none, cross (or x), circle, square, triangle, l, r,
+# select, start, home, up, down, left, right,
+# analog_up, analog_down, analog_left, analog_right. Combine with +.
+# Stick axes: none, analog_x, analog_y; prefix - to invert.
+# Trigger axes: none, analog_left/right/up/down (continuous travel).
+# PSP has one analogue stick. If several sources target it, strongest wins.
+# preset resets that section before the following overrides.
+
+[vsh]
+preset = standard
+# cross = cross
+# circle = circle
+# square = square
+# triangle = triangle
+# l1 = l
+# r1 = r
+# l2 = l
+# r2 = r
+# l3 = none
+# r3 = none
+# create = select
+# options = start
+# ps = home
+# touchpad = none
+# dpad_up = up
+# dpad_down = down
+# dpad_left = left
+# dpad_right = right
+# left_x = analog_x
+# left_y = analog_y
+# right_x = none
+# right_y = none
+# left_up = none
+# left_down = none
+# left_left = none
+# left_right = none
+# right_up = none
+# right_down = none
+# right_left = none
+# right_right = none
+# l2_axis = none
+# r2_axis = none
+# left_deadzone = 16
+# right_deadzone = 32
+
+[game]
+preset = fps
+# cross = cross
+# circle = circle
+# square = square
+# triangle = triangle
+# l1 = l
+# r1 = r
+# l2 = square
+# r2 = cross
+# l3 = none
+# r3 = none
+# create = select
+# options = start
+# ps = home
+# touchpad = none
+# dpad_up = up
+# dpad_down = down
+# dpad_left = left
+# dpad_right = right
+# left_x = analog_x
+# left_y = analog_y
+# right_x = none
+# right_y = none
+# left_up = none
+# left_down = none
+# left_left = none
+# left_right = none
+# right_up = triangle
+# right_down = cross
+# right_left = square
+# right_right = circle
+# l2_axis = none
+# r2_axis = none
+# left_deadzone = 16
+# right_deadzone = 32

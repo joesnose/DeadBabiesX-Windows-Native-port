@@ -1,0 +1,2 @@
+vsh, ef0:/seplugins/pspgo_hci_transport.prx, on
+game, ef0:/seplugins/pspgo_hci_transport.prx, on
