@@ -1,0 +1,2 @@
+vsh, ef0:/seplugins/pspgo_hid_v046.prx, on
+game, ef0:/seplugins/pspgo_hid_v046.prx, on
